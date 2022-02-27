@@ -1,2 +1,2 @@
-# pmrai.github.io
+# Prashant Rai
 This is my Personal Website. More content coming soon...
