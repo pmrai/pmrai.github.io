@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#ffffff" />
   <style>
     :root{
-      --bg:#ffffff; --text:#111827; --muted:#4b5563; --link:#0f62fe; --rule:#e5e7eb;
+      --bg:#ffffff; --text:#4b5563; --muted:#4b5563; --link:#0f62fe; --rule:#e5e7eb;
       --serif: Charter, Georgia, serif; --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       --maxw: 780px;
     }
@@ -18,9 +18,9 @@
     a{color:var(--link);text-decoration:underline;text-underline-offset:2px}
     .wrap{max-width:var(--maxw);margin:0 auto;padding:40px 22px}
     header{margin-bottom:32px}
-    h1{font-family:var(--sans);font-weight:800;letter-spacing:-.01em;font-size:clamp(30px,4.5vw,44px);margin:0 0 10px}
-    h2{font-family:var(--sans);font-weight:700;margin:28px 0 8px;font-size:22px}
-    h3{font-family:var(--sans);font-weight:700;margin:22px 0 6px;font-size:18px}
+    h1{font-family:var(--sans);font-weight:800;letter-spacing:-.01em;font-size:clamp(30px,4.5vw,44px);margin:0 0 10px;color:#111827}
+    h2{font-family:var(--sans);font-weight:700;margin:28px 0 8px;font-size:22px;color:#111827}
+    h3{font-family:var(--sans);font-weight:700;margin:22px 0 6px;font-size:18px;color:#111827}
     p{margin:12px 0}
     nav{display:flex;gap:14px;margin-top:8px;flex-wrap:wrap}
     nav a{font-family:var(--sans);font-size:14px;text-decoration:none;color:#334155}
@@ -39,6 +39,7 @@
       <nav>
         <a href="#expertise">Expertise</a>
         <a href="#work">Work</a>
+        <a href="#samples">Samples</a>
         <a href="#research">Research</a>
         <a href="#contact">Contact</a>
         <a href="resume.pdf" target="_blank">Résumé</a>
@@ -78,6 +79,37 @@
       </article>
     </section>
 
+    <section id="samples" class="section">
+      <h2>Samples</h2>
+      <article>
+        <h3>Heat‑Exchanger Fouling Indicator</h3>
+        <p class="meta">Role: Data Product Manager · Researcher · Applied Scientist</p>
+        <ul>
+          <li>Designed a real‑time fouling score combining heat‑balance checks with pressure‑drop deltas; surfaced economic impact per asset.</li>
+          <li>Delivered dashboard and alerting that reduced unplanned cleanings and improved throughput.</li>
+          <li><a href="#">Read a short case note →</a></li>
+        </ul>
+      </article>
+      <article>
+        <h3>Syngas Compressor Health (Anomaly Detection)</h3>
+        <p class="meta">Role: Researcher · Applied Scientist</p>
+        <ul>
+          <li>Physics‑informed features + autoencoder‑based residuals to flag early degradation.</li>
+          <li>Improved lead time to maintenance decisions while reducing false positives.</li>
+          <li><a href="#">Model walkthrough →</a></li>
+        </ul>
+      </article>
+      <article>
+        <h3>OEE Insights: Downtime Narratives</h3>
+        <p class="meta">Role: Product Manager · Applied Scientist</p>
+        <ul>
+          <li>Line‑level availability, performance, and quality with causal narratives for recurring downtime patterns.</li>
+          <li>Shift‑friendly UI that surfaces actions, not just charts.</li>
+          <li><a href="#">Screens & UX notes →</a></li>
+        </ul>
+      </article>
+    </section>
+
     <section id="research" class="section">
       <h2>Selected Research & Writing</h2>
       <p>Topics I write and speak about include:</p>
@@ -103,4 +135,3 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
-
