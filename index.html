@@ -1,69 +1,54 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Prashant Rai — Research · Product · Data Science</title>
-<meta name="description" content="Researcher and data product manager applying AI and quantitative modeling to reliability, optimization, and energy in industry." />
-<meta name="author" content="Prashant Rai" />
-<link rel="icon" href="assets/favicon.png" />
-<meta name="theme-color" content="#e6edf6" />
-<style>
-:root{
---bg:#ffffff; --text:#4b5563; --title:#111827; --muted:#6b7280; --link:#3b82f6; --rule:#e5e7eb; --chip:#f1f5f9; --chipborder:#e2e8f0; --card:#ffffff; --shadow:0 8px 26px rgba(2,6,23,.06);
---serif: Charter, Georgia, serif; --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
---maxw: 880px;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:18px;line-height:1.7}
-a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:40px 22px}
-h1{font-family:var(--sans);font-weight:800;letter-spacing:-.01em;font-size:clamp(32px,5vw,56px);margin:0 0 6px;color:var(--title)}
-h2{font-family:var(--sans);font-weight:700;margin:26px 0 8px;font-size:24px;color:var(--title)}
-h3{font-family:var(--sans);font-weight:700;margin:18px 0 6px;font-size:18px;color:var(--title)}
-.rule{height:1px;background:var(--rule);margin:18px 0}
-
-
-/* Landing hero */
-.hero{display:grid;grid-template-columns:140px 1fr;gap:20px;align-items:center}
-.avatar{width:140px;height:140px;border-radius:16px;object-fit:cover;border:1px solid var(--chipborder);box-shadow:var(--shadow)}
-.tagline{margin:6px 0 10px;color:var(--muted)}
-
-
-/* Three big links */
-.big-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
-.big-links a{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;border:1px solid var(--chipborder);background:linear-gradient(#ffffff,#fbfdff);text-decoration:none;font-family:var(--sans);font-weight:700;letter-spacing:.2px;box-shadow:var(--shadow)}
-.big-links a:hover{border-color:#bfdbfe;box-shadow:0 12px 28px rgba(37,99,235,.12)}
-
-
-footer{margin:40px 0;color:var(--muted);font-family:var(--sans);font-size:14px;text-align:center}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prashant Rai — Research · Product · Data Science</title>
+  <meta name="description" content="Researcher and data product manager applying AI and quantitative modeling to reliability, optimization, and energy in industry." />
+  <meta name="author" content="Prashant Rai" />
+  <link rel="icon" href="assets/favicon.png" />
+  <meta name="theme-color" content="#e6edf6" />
+  <style>
+    :root{
+      --bg:#ffffff; --text:#4b5563; --title:#111827; --muted:#6b7280; --link:#3b82f6; --rule:#e5e7eb;
+      --serif: Charter, Georgia, serif; --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:16px;line-height:1.6;text-align:center}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:760px;margin:0 auto;padding:40px 20px}
+    img.avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;border:1px solid #d1d5db;margin-bottom:14px}
+    h1{font-family:var(--sans);font-weight:500;font-size:24px;margin:0;color:var(--title)}
+    .nav-links{display:flex;justify-content:center;gap:24px;margin-top:12px;flex-wrap:wrap}
+    .nav-links a{font-family:var(--sans);font-size:16px;letter-spacing:.3px;color:var(--link)}
+    .rule{height:1px;background:var(--rule);margin:24px auto;width:80%}
+    p{margin:10px 0}
+    footer{margin-top:40px;color:var(--muted);font-family:var(--sans);font-size:13px}
+  </style>
 </head>
 <body>
-<div class="wrap">
+  <div class="container">
+    <img src="assets/profile.jpg" alt="Portrait of Prashant Rai" class="avatar">
+    <h1>Prashant Rai</h1>
+    <div class="nav-links">
+      <a href="products.html">Products</a>
+      <a href="industries.html">Industries</a>
+      <a href="research.html">Research</a>
+    </div>
 
+    <div class="rule"></div>
 
-<!-- Landing / Hero -->
-<section class="hero" aria-label="Intro">
-<img class="avatar" src="assets/profile.jpg" alt="Portrait of Prashant Rai" />
-<div>
-<h1>Prashant Rai</h1>
-<p class="tagline">Researcher · Data Product Manager · Applied Data Scientist</p>
-<div class="big-links">
-<a href="products.html" title="Explore products">Products</a>
-<a href="industries.html" title="Industries I've served">Industries</a>
-<a href="research.html" title="Research & writing">Research</a>
-</div>
-</div>
-</section>
+    <section>
+      <p>I work at the intersection of research, product, and applied data science. My focus is on transforming industrial systems—compressors, turbines, and production lines—through AI, optimization, and statistical learning. I care about ideas that move from research to measurable impact in production.</p>
+    </section>
 
-
-<div class="rule"></div>
-
-<footer>
-© <span id="y"></span> Prashant Rai — grey & light‑blue theme, GitHub Pages‑ready
-</footer>
-</div>
-<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+    <footer>
+      © <span id="y"></span> Prashant Rai · grey & light-blue theme
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>.getFullYear()</script>
 </body>
 </html>
