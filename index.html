@@ -14,41 +14,28 @@
       --serif: Charter, Georgia, serif; --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:16px;line-height:1.6;text-align:center}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:16px;line-height:1.6;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh}
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{max-width:760px;margin:0 auto;padding:40px 20px}
-    img.avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;border:1px solid #d1d5db;margin-bottom:14px}
-    h1{font-family:var(--sans);font-weight:500;font-size:24px;margin:0;color:var(--title)}
-    .nav-links{display:flex;justify-content:center;gap:24px;margin-top:12px;flex-wrap:wrap}
+    img.avatar{width:160px;height:160px;border-radius:50%;object-fit:cover;border:1px solid #d1d5db;margin-bottom:14px;display:block}
+    h1{font-family:var(--sans);font-weight:500;font-size:22px;margin:0;color:var(--title)}
+    .nav-links{display:flex;justify-content:center;gap:24px;margin-top:14px;flex-wrap:wrap}
     .nav-links a{font-family:var(--sans);font-size:16px;letter-spacing:.3px;color:var(--link)}
-    .rule{height:1px;background:var(--rule);margin:24px auto;width:80%}
-    p{margin:10px 0}
-    footer{margin-top:40px;color:var(--muted);font-family:var(--sans);font-size:13px}
+    footer{margin-top:40px;color:var(--muted);font-family:var(--sans);font-size:13px;text-align:center}
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="assets/profile.jpg" alt="Portrait of Prashant Rai" class="avatar">
-    <h1>Prashant Rai</h1>
-    <div class="nav-links">
-      <a href="products.html">Products</a>
-      <a href="industries.html">Industries</a>
-      <a href="research.html">Research</a>
-    </div>
-
-    <div class="rule"></div>
-
-    <section>
-      <p>I work at the intersection of research, product, and applied data science. My focus is on transforming industrial systems—compressors, turbines, and production lines—through AI, optimization, and statistical learning. I care about ideas that move from research to measurable impact in production.</p>
-    </section>
-
-    <footer>
-      © <span id="y"></span> Prashant Rai · grey & light-blue theme
-    </footer>
+  <img src="assets/profile.jpg" alt="Portrait of Prashant Rai" class="avatar">
+  <h1>Prashant Rai</h1>
+  <div class="nav-links">
+    <a href="products.html">Products</a>
+    <a href="industries.html">Industries</a>
+    <a href="research.html">Research</a>
   </div>
+
+  <footer>
+    © <span id="y"></span> Prashant Rai · grey & light-blue theme
+  </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
-</body>
-</html>.getFullYear()</script>
 </body>
 </html>
