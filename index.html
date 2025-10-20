@@ -1,137 +1,69 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prashant Rai — Research · Product · Data Science</title>
-  <meta name="description" content="Researcher and data product manager applying AI and quantitative modeling to reliability, optimization, and energy in industry." />
-  <meta name="author" content="Prashant Rai" />
-  <link rel="icon" href="assets/favicon.png" />
-  <meta name="theme-color" content="#ffffff" />
-  <style>
-    :root{
-      --bg:#ffffff; --text:#4b5563; --muted:#4b5563; --link:#0f62fe; --rule:#e5e7eb;
-      --serif: Charter, Georgia, serif; --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      --maxw: 780px;
-    }
-    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:18px;line-height:1.7}
-    a{color:var(--link);text-decoration:underline;text-underline-offset:2px}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:40px 22px}
-    header{margin-bottom:32px}
-    h1{font-family:var(--sans);font-weight:800;letter-spacing:-.01em;font-size:clamp(30px,4.5vw,44px);margin:0 0 10px;color:#111827}
-    h2{font-family:var(--sans);font-weight:700;margin:28px 0 8px;font-size:22px;color:#111827}
-    h3{font-family:var(--sans);font-weight:700;margin:22px 0 6px;font-size:18px;color:#111827}
-    p{margin:12px 0}
-    nav{display:flex;gap:14px;margin-top:8px;flex-wrap:wrap}
-    nav a{font-family:var(--sans);font-size:14px;text-decoration:none;color:#334155}
-    nav a:hover{text-decoration:underline}
-    .rule{height:1px;background:var(--rule);margin:18px 0}
-    .section{margin:32px 0}
-    .meta{font-family:var(--sans);font-size:14px;color:var(--muted)}
-    footer{margin:40px 0;color:var(--muted);font-family:var(--sans);font-size:14px;text-align:center}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prashant Rai — Research · Product · Data Science</title>
+<meta name="description" content="Researcher and data product manager applying AI and quantitative modeling to reliability, optimization, and energy in industry." />
+<meta name="author" content="Prashant Rai" />
+<link rel="icon" href="assets/favicon.png" />
+<meta name="theme-color" content="#e6edf6" />
+<style>
+:root{
+--bg:#ffffff; --text:#4b5563; --title:#111827; --muted:#6b7280; --link:#3b82f6; --rule:#e5e7eb; --chip:#f1f5f9; --chipborder:#e2e8f0; --card:#ffffff; --shadow:0 8px 26px rgba(2,6,23,.06);
+--serif: Charter, Georgia, serif; --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+--maxw: 880px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:18px;line-height:1.7}
+a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:40px 22px}
+h1{font-family:var(--sans);font-weight:800;letter-spacing:-.01em;font-size:clamp(32px,5vw,56px);margin:0 0 6px;color:var(--title)}
+h2{font-family:var(--sans);font-weight:700;margin:26px 0 8px;font-size:24px;color:var(--title)}
+h3{font-family:var(--sans);font-weight:700;margin:18px 0 6px;font-size:18px;color:var(--title)}
+.rule{height:1px;background:var(--rule);margin:18px 0}
+
+
+/* Landing hero */
+.hero{display:grid;grid-template-columns:140px 1fr;gap:20px;align-items:center}
+.avatar{width:140px;height:140px;border-radius:16px;object-fit:cover;border:1px solid var(--chipborder);box-shadow:var(--shadow)}
+.tagline{margin:6px 0 10px;color:var(--muted)}
+
+
+/* Three big links */
+.big-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
+.big-links a{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;border:1px solid var(--chipborder);background:linear-gradient(#ffffff,#fbfdff);text-decoration:none;font-family:var(--sans);font-weight:700;letter-spacing:.2px;box-shadow:var(--shadow)}
+.big-links a:hover{border-color:#bfdbfe;box-shadow:0 12px 28px rgba(37,99,235,.12)}
+
+
+footer{margin:40px 0;color:var(--muted);font-family:var(--sans);font-size:14px;text-align:center}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Prashant Rai</h1>
-      <div class="meta">Research · Product · Data Science</div>
-      <nav>
-        <a href="#expertise">Expertise</a>
-        <a href="#work">Work</a>
-        <a href="#samples">Samples</a>
-        <a href="#research">Research</a>
-        <a href="#contact">Contact</a>
-        <a href="resume.pdf" target="_blank">Résumé</a>
-      </nav>
-      <div class="rule"></div>
-    </header>
+<div class="wrap">
 
-    <section id="intro" class="section">
-      <h2>Hi, I’m Prashant.</h2>
-      <p>I bridge research, product, and applied data science. My work focuses on transforming industrial systems — from compressors to production lines — using AI, optimization, and statistical learning. I enjoy taking ideas from research prototypes to deployable products that create measurable impact.</p>
-    </section>
 
-    <section id="expertise" class="section">
-      <h2>Expertise</h2>
-      <p>I combine academic research depth with product execution. My areas of focus include:</p>
-      <ul>
-        <li><strong>Machine Learning for Reliability:</strong> Anomaly detection, predictive maintenance, and physics‑informed models.</li>
-        <li><strong>Optimization & Operations:</strong> Yield improvement, energy efficiency, and prescriptive analytics for process plants.</li>
-        <li><strong>Data Product Leadership:</strong> Translating AI insights into deployable, user‑facing tools with measurable ROI.</li>
-        <li><strong>Research Translation:</strong> Bridging stochastic modeling, causal inference, and decision science to real‑world use.</li>
-      </ul>
-    </section>
+<!-- Landing / Hero -->
+<section class="hero" aria-label="Intro">
+<img class="avatar" src="assets/profile.jpg" alt="Portrait of Prashant Rai" />
+<div>
+<h1>Prashant Rai</h1>
+<p class="tagline">Researcher · Data Product Manager · Applied Data Scientist</p>
+<div class="big-links">
+<a href="products.html" title="Explore products">Products</a>
+<a href="industries.html" title="Industries I've served">Industries</a>
+<a href="research.html" title="Research & writing">Research</a>
+</div>
+</div>
+</section>
 
-    <section id="work" class="section">
-      <h2>Work Highlights</h2>
-      <article>
-        <h3>AI for Reliability and Energy — Industry</h3>
-        <p>Led development of data products that improved reliability and optimized energy use across industrial assets — including compressors, turbines, and heat exchangers. Built productionized analytics pipelines for OEE dashboards, fouling detection, and energy KPIs.</p>
-      </article>
-      <article>
-        <h3>Researcher — Statistical Learning & Complex Systems</h3>
-        <p>PhD research focused on probabilistic modeling, rare‑event estimation, and decision‑making under uncertainty — methods now applied in reliability, forecasting, and causal analysis.</p>
-      </article>
-      <article>
-        <h3>Product Management for AI Solutions</h3>
-        <p>Own the end‑to‑end lifecycle of AI tools — from ideation and feasibility to MVP deployment, with iterative validation through customer pilots and production scaling.</p>
-      </article>
-    </section>
 
-    <section id="samples" class="section">
-      <h2>Samples</h2>
-      <article>
-        <h3>Heat‑Exchanger Fouling Indicator</h3>
-        <p class="meta">Role: Data Product Manager · Researcher · Applied Scientist</p>
-        <ul>
-          <li>Designed a real‑time fouling score combining heat‑balance checks with pressure‑drop deltas; surfaced economic impact per asset.</li>
-          <li>Delivered dashboard and alerting that reduced unplanned cleanings and improved throughput.</li>
-          <li><a href="#">Read a short case note →</a></li>
-        </ul>
-      </article>
-      <article>
-        <h3>Syngas Compressor Health (Anomaly Detection)</h3>
-        <p class="meta">Role: Researcher · Applied Scientist</p>
-        <ul>
-          <li>Physics‑informed features + autoencoder‑based residuals to flag early degradation.</li>
-          <li>Improved lead time to maintenance decisions while reducing false positives.</li>
-          <li><a href="#">Model walkthrough →</a></li>
-        </ul>
-      </article>
-      <article>
-        <h3>OEE Insights: Downtime Narratives</h3>
-        <p class="meta">Role: Product Manager · Applied Scientist</p>
-        <ul>
-          <li>Line‑level availability, performance, and quality with causal narratives for recurring downtime patterns.</li>
-          <li>Shift‑friendly UI that surfaces actions, not just charts.</li>
-          <li><a href="#">Screens & UX notes →</a></li>
-        </ul>
-      </article>
-    </section>
+<div class="rule"></div>
 
-    <section id="research" class="section">
-      <h2>Selected Research & Writing</h2>
-      <p>Topics I write and speak about include:</p>
-      <ul>
-        <li>Fat‑tailed risk and uncertainty in industrial data.</li>
-        <li>Agentic AI and reasoning systems for process optimization.</li>
-        <li>System dynamics for complex process modeling.</li>
-        <li>Bridging quantitative modeling and management decision‑making.</li>
-      </ul>
-      <p>See more on <a href="https://scholar.google.com/citations?user=<id>">Google Scholar</a> or <a href="https://github.com/<your-username>">GitHub</a>.</p>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>If you’d like to collaborate or discuss opportunities, reach out:</p>
-      <p>Email: <a href="mailto:hello@example.com">hello@example.com</a> · <a href="https://www.linkedin.com/in/<your-handle>">LinkedIn</a></p>
-    </section>
-
-    <footer>
-      © <span id="y"></span> Prashant Rai — Data Science · Product · Research
-    </footer>
-  </div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+<footer>
+© <span id="y"></span> Prashant Rai — grey & light‑blue theme, GitHub Pages‑ready
+</footer>
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
