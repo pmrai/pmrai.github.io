@@ -8,7 +8,11 @@
   <meta name="theme-color" content="#e6edf6" />
   <link rel="icon" href="assets/favicon.png" />
   <style>
-    :root{ --bg:#ffffff; --text:#4b5563; --title:#111827; --muted:#6b7280; --link:#3b82f6; --rule:#e5e7eb; --tile:#f8fafc; --serif:Charter, Georgia, serif; --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+    :root{
+      --bg:#ffffff; --text:#4b5563; --title:#111827; --muted:#6b7280;
+      --link:#3b82f6; --rule:#e5e7eb; --tile:#f8fafc;
+      --serif: Charter, Georgia, serif; --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:16px;line-height:1.6}
     a{color:var(--link);text-decoration:none}
@@ -24,8 +28,20 @@
     @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:640px){.grid{grid-template-columns:1fr}}
 
-    .tile{background:var(--tile);border:1px solid var(--rule);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px}
-    .thumb{width:100%;aspect-ratio:16/9;background:#eef2f7;border:1px solid var(--rule);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#9aa3af;font-family:var(--sans);font-size:12px}
+    .tile{
+      background:var(--tile);border:1px solid var(--rule);border-radius:14px;
+      padding:12px;display:flex;flex-direction:column;gap:10px
+    }
+
+    /* Thumb supports BOTH placeholder <div.thumb> and real <img.thumb> */
+    .thumb{width:100%;border:1px solid var(--rule);border-radius:10px}
+    img.thumb{aspect-ratio:16/9;object-fit:cover;display:block;background:#eef2f7}
+    div.thumb{
+      aspect-ratio:16/9;background:#eef2f7;display:flex;align-items:center;justify-content:center;
+      color:#9aa3af;font-family:var(--sans);font-size:12px
+    }
+    /* Optional: if you ever want natural aspect ratio, change img.thumb to: width:100%; height:auto; */
+
     .tile h2{font-family:var(--sans);font-weight:500;font-size:18px;line-height:1.3;color:var(--title);margin:0}
     .meta{font-family:var(--sans);font-size:12px;color:var(--muted)}
     .desc{margin:0}
@@ -46,8 +62,8 @@
       <article class="tile">
         <div class="thumb">(graphic)</div>
         <h2>Asset Health</h2>
-        <p class="meta">Remaining Useful Life · role: product ideation and development</p>
-        <p class="desc">Single fouling score from heat‑balance and ΔP signals; shows dollar impact. Built for quick trust on the plant floor.</p>
+        <p class="meta">Remaining Useful Life · role: product ideation & development</p>
+        <p class="desc">RUL estimates and early-warning windows using degradation features and operational context.</p>
         <div class="links">
           <a href="#">Case note →</a>
           <a href="#">Patent link →</a>
@@ -57,8 +73,8 @@
       <article class="tile">
         <div class="thumb">(graphic)</div>
         <h2>Energy Efficiency</h2>
-        <p class="meta">Anomaly detection · role: product ideation and development</p>
-        <p class="desc">Physics‑informed features in Machine Learning for improving energy efficiency and sustainability.</p>
+        <p class="meta">Energy optimization · role: product ideation & development</p>
+        <p class="desc">Physics-informed ML to detect off-design operation and close the gap to best-practice energy baselines.</p>
         <div class="links">
           <a href="#">Model walkthrough →</a>
           <a href="#">Patent link →</a>
@@ -76,10 +92,10 @@
       </article>
 
       <article class="tile">
-        <img class="thumb" src="assets/safeway.jpeg" alt="Stock out">
+        <img class="thumb" src="assets/safeway.jpeg" alt="SKU stock-out alert visualization">
         <h2>SKU Stock Outs</h2>
-        <p class="meta">Energy optimization · role: product prototype</p>
-        <p class="desc">Raising low inventory alerts to avoid stock outs</p>
+        <p class="meta">Inventory & retail ops · role: product prototype</p>
+        <p class="desc">Low-inventory alerts to prevent stock-outs; simple signals built for quick adoption.</p>
         <div class="links">
           <a href="#">Method note →</a>
         </div>
@@ -89,17 +105,17 @@
         <div class="thumb">(graphic)</div>
         <h2>Agentic Diagnostics</h2>
         <p class="meta">Reasoning agents · role: design & prototyping</p>
-        <p class="desc">Causal graph + tool‑use agents to explain anomalies, pull the right plots, and propose next checks.</p>
+        <p class="desc">Causal-graph + tool-use agents to explain anomalies, fetch the right plots, and propose next checks.</p>
         <div class="links">
           <a href="#">Demo note →</a>
         </div>
       </article>
 
       <article class="tile">
-        <img class="thumb" src="assets/safe_haven.png" alt="fan chart">
+        <img class="thumb" src="assets/safe_haven.png" alt="Safe Haven Investing fan chart">
         <h2>Safe Haven Investing</h2>
-        <p class="meta">Equities, Investments with Insurance · role: product implementation</p>
-        <p class="desc">Risk insured safe haven investing, Amor Fati</p>
+        <p class="meta">Equities & risk management · role: product implementation</p>
+        <p class="desc">Risk-insured “safe haven” framework for drawdown control; portfolio overlays with clear rules.</p>
         <div class="links">
           <a href="#">Repo/notes →</a>
         </div>
