@@ -24,29 +24,58 @@
     .rule{height:1px;background:var(--rule);margin:18px 0}
 
     /* Grid of index cards */
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
     @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:640px){.grid{grid-template-columns:1fr}}
 
     .tile{
-      background:var(--tile);border:1px solid var(--rule);border-radius:14px;
-      padding:12px;display:flex;flex-direction:column;gap:10px
+      background:var(--tile);
+      border:1px solid var(--rule);
+      border-radius:14px;
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      height:100%;
     }
 
-    /* Thumb supports BOTH placeholder <div.thumb> and real <img.thumb> */
-    .thumb{width:100%;border:1px solid var(--rule);border-radius:10px}
-    img.thumb {width: 100%;height: auto;border-radius: 10px;border: 1px solid var(--rule);background: #eef2f7;object-fit: contain;
+    /* Uniform media area: keeps full image visible (no crop) in 16:9 box */
+    .media{
+      position:relative;
+      width:100%;
+      aspect-ratio:16/9;
+      background:#eef2f7;
+      border:1px solid var(--rule);
+      border-radius:10px;
+      overflow:hidden;
     }
-
-    div.thumb{
-      aspect-ratio:16/9;background:#eef2f7;display:flex;align-items:center;justify-content:center;
-      color:#9aa3af;font-family:var(--sans);font-size:12px
+    .media img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:contain;   /* show entire image */
+      padding:6px;          /* small breathing room inside the frame */
     }
-    /* Optional: if you ever want natural aspect ratio, change img.thumb to: width:100%; height:auto; */
+    /* (Optional) placeholder text if no image */
+    .media .ph{
+      position:absolute; inset:0;
+      display:flex; align-items:center; justify-content:center;
+      color:#9aa3af; font-family:var(--sans); font-size:12px;
+    }
 
     .tile h2{font-family:var(--sans);font-weight:500;font-size:18px;line-height:1.3;color:var(--title);margin:0}
-    .meta{font-family:var(--sans);font-size:12px;color:var(--muted)}
-    .desc{margin:0}
+    .meta{font-family:var(--sans);font-size:12px;color:var(--muted);margin:0}
+    .desc{
+      margin:0;
+      display:-webkit-box;
+      -webkit-line-clamp:3;   /* keep descriptions tidy for uniform height */
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
+
+    .spacer{flex:1} /* pushes links to tile bottom for consistent alignment */
+
     .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
     .links a{font-family:var(--sans);font-size:13px}
   </style>
@@ -61,22 +90,28 @@
     <div class="rule"></div>
 
     <section class="grid" aria-label="Product tiles">
+
       <article class="tile">
-        <img class="thumb" src="assets/cat.png" alt="Caterpillar">
+        <div class="media">
+          <img src="assets/cat.png" alt="Caterpillar">
+        </div>
         <h2>Machine Data Insights</h2>
-        <p class="meta">Application Segmentation  · role: product development and deployment</p>
-        <p class="desc">Monetizing information from machine activity using deep learning from IoT sensor data</p>
+        <p class="meta">Application segmentation · role: product development & deployment</p>
+        <p class="desc">Monetizing information from machine activity using deep learning over IoT telemetry.</p>
+        <div class="spacer"></div>
         <div class="links">
           <a href="assets/cat_patent_1.pdf" target="_blank" rel="noopener">Patent →</a>
         </div>
       </article>
 
-
       <article class="tile">
-        <img class="thumb" src="assets/Picture2.png" alt="HEX">
+        <div class="media">
+          <img src="assets/Picture2.png" alt="Heat exchanger">
+        </div>
         <h2>Asset Health</h2>
         <p class="meta">Remaining Useful Life · role: product ideation & development</p>
         <p class="desc">RUL estimates and early-warning windows using degradation features and operational context.</p>
+        <div class="spacer"></div>
         <div class="links">
           <a href="assets/baker_hughes.pdf" target="_blank" rel="noopener">Patent →</a>
           <a href="https://onepetro.org/SPEADIP/proceedings-abstract/23ADIP/4-23ADIP/D031S117R007/534864" target="_blank" rel="noopener">Paper →</a>
@@ -84,48 +119,64 @@
       </article>
 
       <article class="tile">
-        <img class="thumb" src="assets/Picture1.png" alt="Pump">
+        <div class="media">
+          <img src="assets/Picture1.png" alt="Pump efficiency">
+        </div>
         <h2>Energy Efficiency</h2>
         <p class="meta">Energy optimization · role: product ideation & development</p>
         <p class="desc">Physics-informed ML to detect off-design operation and close the gap to best-practice energy baselines.</p>
+        <div class="spacer"></div>
         <div class="links">
-          <a href="#">Patent link (coming soon)→</a>
+          <a href="#" aria-disabled="true">Patent link (coming soon) →</a>
         </div>
       </article>
 
       <article class="tile">
-        <img class="thumb" src="assets/Picture3.png" alt="OEE">
+        <div class="media">
+          <img src="assets/Picture3.png" alt="OEE dashboards">
+        </div>
         <h2>OEE Insights</h2>
-        <p class="meta">Manufacturing performance · role: product ideation, development and deployment</p>
+        <p class="meta">Manufacturing performance · role: product ideation, development & deployment</p>
         <p class="desc">Availability, performance, quality — concise downtime narratives that suggest action, not just charts.</p>
+        <div class="spacer"></div>
         <div class="links">
-          <a href="#">Product launch (coming soon) →</a>
+          <a href="#" aria-disabled="true">Product launch (coming soon) →</a>
         </div>
       </article>
 
       <article class="tile">
-        <img class="thumb" src="assets/safeway.jpeg" alt="SKU stock-out alert visualization">
+        <div class="media">
+          <img src="assets/safeway.jpeg" alt="SKU stock-out alert visualization">
+        </div>
         <h2>SKU Stock Outs</h2>
         <p class="meta">Inventory & retail ops · role: product prototype</p>
         <p class="desc">Low-inventory alerts to prevent stock-outs; simple signals built for quick adoption.</p>
+        <div class="spacer"></div>
       </article>
 
       <article class="tile">
-        <img class="thumb" src="assets/caussal_rag.png" alt="OEE">
+        <div class="media">
+          <img src="assets/caussal_rag.png" alt="LLM agentic diagnostics">
+        </div>
         <h2>LLM Agentic Diagnostics</h2>
         <p class="meta">Reasoning agents · role: design & prototyping</p>
         <p class="desc">Causal-graph + tool-use agents to explain anomalies, fetch the right plots, and propose next checks.</p>
+        <div class="spacer"></div>
         <div class="links">
-          <a href="https://onepetro.org/SPEADIP/proceedings-abstract/24ADIP/24ADIP/D011S008R003/585031" target="_blank" rel="noopener">Paper →</a></a>
+          <a href="https://onepetro.org/SPEADIP/proceedings-abstract/24ADIP/24ADIP/D011S008R003/585031" target="_blank" rel="noopener">Paper →</a>
         </div>
       </article>
 
       <article class="tile">
-        <img class="thumb" src="assets/safe_haven.png" alt="Safe Haven Investing fan chart">
+        <div class="media">
+          <img src="assets/safe_haven.png" alt="Safe Haven Investing fan chart">
+        </div>
         <h2>Safe Haven Investing</h2>
         <p class="meta">Equities & risk management · role: product implementation</p>
         <p class="desc">Risk-insured “safe haven” framework for drawdown control; portfolio overlays with clear rules.</p>
+        <div class="spacer"></div>
       </article>
+
     </section>
 
     <footer style="margin-top:28px;text-align:center;font-family:var(--sans);font-size:13px;color:var(--muted)">
