@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research — Prashant Rai</title>
+  <meta name="description" content="Selected research areas — concise tiles with optional logos and links." />
+  <meta name="theme-color" content="#e6edf6" />
+  <link rel="icon" href="assets/favicon.png" />
+  <style>
+    :root{ --bg:#ffffff; --text:#4b5563; --title:#111827; --muted:#6b7280; --link:#3b82f6; --rule:#e5e7eb; --tile:#f8fafc; --serif:Charter, Georgia, serif; --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:16px;line-height:1.6}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1060px;margin:0 auto;padding:40px 20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .home{font-family:var(--sans);font-size:14px}
+    h1{font-family:var(--sans);font-weight:500;font-size:22px;margin:0;color:var(--title)}
+    .rule{height:1px;background:var(--rule);margin:18px 0}
+
+    /* Grid of research tiles */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.grid{grid-template-columns:1fr}}
+
+    .tile{background:var(--tile);border:1px solid var(--rule);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px}
+
+    /* Optional logos row */
+    .logos{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .logo{height:20px;object-fit:contain;filter:grayscale(100%);opacity:.9}
+
+    /* Optional graphic */
+    .thumb{width:100%;border:1px solid var(--rule);border-radius:10px;background:#eef2f7;color:#9aa3af;font-family:var(--sans);font-size:12px;display:flex;align-items:center;justify-content:center}
+    img.thumb{height:auto}
+
+    .tile h2{font-family:var(--sans);font-weight:500;font-size:18px;line-height:1.3;color:var(--title);margin:0}
+    .meta{font-family:var(--sans);font-size:12px;color:var(--muted)}
+    .desc{margin:0}
+    .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+    .links a{font-family:var(--sans);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="home" href="index.html">← Home</a>
+      <h1>Research</h1>
+      <span></span>
+    </header>
+    <div class="rule"></div>
+
+    <section class="grid" aria-label="Research tiles">
+      <!-- 1) Uncertainty Quantification -->
+      <article class="tile">
+        <div class="logos">
+          <!-- Optional logos: drop files into /assets and uncomment
+          <img class="logo" src="assets/airbus.png" alt="Airbus"/>
+          <img class="logo" src="assets/sandia.png" alt="Sandia National Labs"/>
+          -->
+        </div>
+        <h2>Uncertainty Quantification</h2>
+        <p class="meta">Airbus Group Innovations · Sandia National Labs</p>
+        <p class="desc">Short introduction to my UQ work: probabilistic modeling, propagation of uncertainty, and risk-aware decision support for complex engineered systems.</p>
+        <div class="links">
+          <a href="#">Summary note →</a>
+          <a href="#">Slides/Paper (PDF) →</a>
+        </div>
+      </article>
+
+      <!-- 2) Quantum Chemistry -->
+      <article class="tile">
+        <div class="logos">
+          <!-- Optional logos:
+          <img class="logo" src="assets/sandia.png" alt="Sandia National Labs"/>
+          <img class="logo" src="assets/uiuc.png" alt="UIUC"/>
+          -->
+        </div>
+        <h2>Quantum Chemistry</h2>
+        <p class="meta">Sandia National Labs · UIUC</p>
+        <p class="desc">Methods and tooling for quantum chemistry workflows — emphasizing accuracy/efficiency and high dimesnional integrals.</p>
+        <div class="links">
+          <a href="#">Project summary →</a>
+          <a href="#">Code/Poster →</a>
+        </div>
+      </article>
+
+      <!-- 3) Placeholder / third tile you can retitle -->
+      <article class="tile">
+        <div class="logos">
+          <!-- Optional logos:
+          <img class="logo" src="assets/evtlab.png" alt="EVT Lab"/>
+          -->
+        </div>
+        <h2>Fat‑Tailed Risk & EVT</h2>
+        <p class="meta">Method notes · talks</p>
+        <p class="desc">Concise notes on tail index estimation, extreme value methods, and implications for reliability and financial risk.</p>
+        <div class="links">
+          <a href="#">One‑pager →</a>
+          <a href="#">Talk slides →</a>
+        </div>
+      </article>
+    </section>
+
+    <footer style="margin-top:28px;text-align:center;font-family:var(--sans);font-size:13px;color:var(--muted)">
+      © <span id="y"></span> Prashant Rai — minimalist grey + light‑blue theme
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
