@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Knowledge Base — Prashant Rai</title>
+  <meta name="description" content="Personal notes and field observations on CRM, data products, AI, and industrial software." />
+  <meta name="theme-color" content="#e6edf6" />
+  <link rel="icon" href="assets/favicon.png" />
+  <style>
+    :root{
+      --bg:#ffffff; --text:#4b5563; --title:#111827; --muted:#6b7280;
+      --link:#3b82f6; --rule:#e5e7eb; --tile:#f8fafc;
+      --serif: Charter, Georgia, serif; --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:16px;line-height:1.65}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:880px;margin:0 auto;padding:40px 20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .home{font-family:var(--sans);font-size:14px}
+    h1,h2,h3{font-family:var(--sans);color:var(--title);font-weight:500;line-height:1.25}
+    h1{font-size:22px;margin:0}
+    h2{font-size:24px;margin:0 0 8px}
+    h3{font-size:18px;margin:26px 0 8px}
+    p{margin:0 0 14px}
+    .rule{height:1px;background:var(--rule);margin:18px 0}
+    .article{
+      background:var(--tile);
+      border:1px solid var(--rule);
+      border-radius:14px;
+      padding:24px;
+    }
+    .meta{font-family:var(--sans);font-size:13px;color:var(--muted);margin-bottom:18px}
+    .lead{font-size:18px;color:var(--title)}
+    .takeaway{
+      border-top:1px solid var(--rule);
+      margin-top:22px;
+      padding-top:18px;
+    }
+    .questions{
+      margin-top:12px;
+      padding:14px 16px;
+      background:#ffffff;
+      border:1px solid var(--rule);
+      border-radius:10px;
+    }
+    .questions h4{
+      margin:0 0 8px;
+      font-family:var(--sans);
+      font-size:13px;
+      color:var(--muted);
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+    ul{margin:0 0 0 20px;padding:0}
+    li{margin:6px 0}
+    footer{margin-top:28px;text-align:center;font-family:var(--sans);font-size:13px;color:var(--muted)}
+    @media(max-width:640px){
+      .wrap{padding:28px 16px}
+      header{align-items:flex-start}
+      .article{padding:18px}
+      h2{font-size:21px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="home" href="index.html">&larr; Home</a>
+      <h1>Knowledge Base</h1>
+      <span></span>
+    </header>
+    <div class="rule"></div>
+
+    <article class="article">
+      <p class="meta">Dreamforce 2026 notes &middot; CRM for manufacturing</p>
+      <h2>CRM For Manufacturing After Dreamforce: A Personal Take</h2>
+
+      <p class="lead">My biggest takeaway from Dreamforce was that Salesforce is trying to move CRM from being a sales system into something much larger: a customer operating layer. For manufacturing companies, that is both exciting and dangerous.</p>
+
+      <p>Exciting because manufacturing sales and service are deeply fragmented. Customer context lives across CRM, SAP, service systems, product data, partner channels, Snowflake, Databricks, email, and spreadsheets. Dangerous because the conference version of the future can make every feature look urgent.</p>
+
+      <p>I would not look at this as &ldquo;what should we buy?&rdquo; I would look at it as &ldquo;what problems are real enough to deserve change?&rdquo;</p>
+
+      <section class="takeaway">
+        <h3>1. Start With The Use Cases That Actually Hurt</h3>
+        <p>For manufacturing, the hard problems are usually not abstract. They are things like quote complexity, slow handoffs, unclear account ownership, poor visibility into installed products, service issues that sales finds out about too late, and data sitting in SAP that reps cannot easily use.</p>
+        <p>That is where CRM can matter.</p>
+        <p>But once complex business logic enters the picture, especially around SAP, pricing, approvals, product rules, and service workflows, I would be careful about assuming the internal team can simply build it. Most teams already have full-time jobs. This is where enterprise partners become important, not as a luxury, but because the implementation burden can get heavy very quickly.</p>
+        <div class="questions">
+          <h4>Questions I would ask</h4>
+          <ul>
+            <li>Which workflows are painful enough to justify CRM change?</li>
+            <li>Which rules belong to SAP, pricing, service, or product systems?</li>
+            <li>Where would an implementation partner reduce risk instead of adding overhead?</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="takeaway">
+        <h3>2. The Slack Question Is Really An Adoption Question</h3>
+        <p>Salesforce clearly wants Slack to be the collaboration surface for agents and workflows. In the demos, that looks clean: alerts, summaries, approvals, account updates, all showing up in the flow of work.</p>
+        <p>But I would be skeptical of switching to Slack just to unlock more features.</p>
+        <p>If a sales team does not use Teams well today, it probably will not use Slack well just because Slack has better Salesforce demos. The issue may not be the tool. It may be sales discipline, process clarity, notification fatigue, or lack of trust in CRM data.</p>
+        <p>So the question is not &ldquo;Should we move to Slack?&rdquo; The better question is: where does actual work happen today, and would moving it create business value or just another channel?</p>
+        <div class="questions">
+          <h4>Questions I would ask</h4>
+          <ul>
+            <li>Do sales and service teams already use Teams, Slack, or email with discipline?</li>
+            <li>Would a new channel improve decision speed, or create another place to check?</li>
+            <li>Are collaboration problems really tool problems, or operating-model problems?</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="takeaway">
+        <h3>3. Zero-Copy Data Integration Feels More Practical Than The Flashy AI</h3>
+        <p>One of the more useful ideas from the conference was zero-copy integration with platforms like Snowflake and Databricks.</p>
+        <p>For manufacturers, that matters. A lot of the valuable data does not live in CRM: order history, service records, demand signals, product telemetry, installed-base data, warranty information, and customer profitability. Copying all of that into Salesforce is not always the right answer.</p>
+        <p>If a company already has Snowflake, Databricks, or similar platforms, using that data to ground agentic applications could be genuinely valuable. That feels like a better direction than creating another giant data copy just to power a CRM feature.</p>
+        <div class="questions">
+          <h4>Questions I would ask</h4>
+          <ul>
+            <li>Which enterprise data should stay in Snowflake, Databricks, or the warehouse?</li>
+            <li>Which agentic workflows need governed data rather than copied data?</li>
+            <li>Can account, product, asset, and service identifiers be matched reliably?</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="takeaway">
+        <h3>4. AI Assistants Will Take Time In Manufacturing</h3>
+        <p>I left with the impression that Claude, ChatGPT, Gemini, and similar interfaces will become part of the CRM ecosystem, but manufacturing companies may take time to adopt them deeply.</p>
+        <p>That is just the nature of the industry. These are high-inertia organizations. They have long sales cycles, complex approval paths, legacy systems, compliance concerns, and a lot of tribal knowledge.</p>
+        <p>So I would not ignore the technology, but I also would not rush to put AI in the middle of pricing, quoting, contracts, or customer commitments. The better near-term path is learning: account summaries, meeting prep, service-case synthesis, internal knowledge search, quote-status lookup.</p>
+        <p>Small investments now can build organizational muscle without betting the business on immature workflows.</p>
+        <div class="questions">
+          <h4>Questions I would ask</h4>
+          <ul>
+            <li>Which AI pilots teach the organization without creating customer risk?</li>
+            <li>Where can AI assist users before it acts on their behalf?</li>
+            <li>What governance is needed before customer-facing AI is trusted?</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="takeaway">
+        <h3>5. Ground Truth Matters More Than Headless Experiences</h3>
+        <p>There was a lot of talk about headless experiences: agents and CRM workflows showing up in Slack, web apps, portals, Claude, mobile, or wherever the user happens to be.</p>
+        <p>That is interesting, but I kept coming back to one thing: if the underlying data is wrong, the interface does not matter.</p>
+        <p>For manufacturing, fidelity is everything. A rep needs the right price, the right service status, the right installed-base view, the right account hierarchy, and the right product context. A headless experience that gives a polished answer based on weak data is not high ROI. It may actually reduce trust.</p>
+        <p>Before getting too excited about new interfaces, I would want to know whether the insights are grounded in ground truth.</p>
+        <div class="questions">
+          <h4>Questions I would ask</h4>
+          <ul>
+            <li>Which facts must be correct before the workflow is useful?</li>
+            <li>Can users trace an AI-generated insight back to the source system?</li>
+            <li>Will this experience increase trust in CRM or expose weak data quality?</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="takeaway">
+        <h3>6. ERP Integration Is Where The Real Work Is</h3>
+        <p>The most valuable manufacturing CRM opportunities seem to sit between CRM and ERP. That is where SAP, pricing, order status, product rules, supplier workflows, service history, and customer commitments come together.</p>
+        <p>That is also where implementation gets difficult.</p>
+        <p>So the partner question becomes important. I would look for partners who understand both the new CRM agentic features and the ERP backbone. It is not enough to build a chatbot or a nice Salesforce flow. The hard part is making sure the agent or workflow respects the business logic that actually runs the company.</p>
+        <div class="questions">
+          <h4>Questions I would ask</h4>
+          <ul>
+            <li>Which partners have proven SAP or ERP integration experience?</li>
+            <li>Can they implement agentic features without bypassing core business rules?</li>
+            <li>Do they understand manufacturing workflows, or only Salesforce configuration?</li>
+          </ul>
+        </div>
