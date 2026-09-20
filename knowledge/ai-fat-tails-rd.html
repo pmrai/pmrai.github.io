@@ -9,7 +9,7 @@
   <link rel="icon" href="../assets/favicon.png" />
   <style>
     :root{
-      --bg:#ffffff; --text:#374151; --title:#1f2937; --muted:#4b5563;
+      --bg:#ffffff; --text:#4b5563; --title:#111827; --muted:#9ca3af;
       --link:#3b82f6; --rule:#e5e7eb; --tile:#f8fafc;
       --serif: Charter, Georgia, serif; --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
     }
@@ -29,7 +29,7 @@
     .article{background:var(--tile);border:1px solid var(--rule);border-radius:14px;padding:24px}
     .meta{font-size:16px;color:var(--muted);margin-bottom:18px}
     .lead{font-size:16px;color:var(--text)}
-    .hero-figure{margin:22px 0 24px;background:#ffffff;border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+    .hero-figure{max-width:720px;margin:22px auto 24px;background:#ffffff;border:1px solid var(--rule);border-radius:12px;overflow:hidden}
     .hero-figure img{display:block;width:100%;height:auto}
     .takeaway{border-top:1px solid var(--rule);margin-top:22px;padding-top:18px}
     .callout{margin:16px 0;padding:14px 16px;background:#ffffff;border:1px solid var(--rule);border-radius:10px;font-family:var(--sans);color:var(--title)}
@@ -37,7 +37,7 @@
     @media(max-width:640px){
       .wrap{padding:28px 16px}
       .article{padding:18px}
-      .hero-figure{margin-left:-6px;margin-right:-6px;border-radius:10px}
+      .hero-figure{border-radius:10px}
     }
   </style>
 </head>
