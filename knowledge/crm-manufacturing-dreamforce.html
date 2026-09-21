@@ -29,6 +29,8 @@
     .meta{font-size:16px;color:var(--muted);margin-bottom:18px}
     .title{font-size:18px;margin:0 0 14px}
     .lead{font-size:16px;color:var(--text)}
+    .article-figure{max-width:760px;margin:22px auto 24px;background:#ffffff;border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+    .article-figure img{display:block;width:100%;height:auto}
     .takeaway{border-top:1px solid var(--rule);margin-top:22px;padding-top:18px}
     .questions{margin-top:12px;padding:14px 16px;background:#ffffff;border:1px solid var(--rule);border-radius:10px}
     .questions h3{margin:0 0 8px;font-family:var(--sans);font-size:16px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:0}
@@ -38,6 +40,7 @@
     @media(max-width:640px){
       .wrap{padding:28px 16px}
       .article{padding:18px}
+      .article-figure{border-radius:10px}
     }
       .emph{color:var(--link);font-weight:600}
   </style>
@@ -56,6 +59,10 @@
 
       <p class="lead">Dreamforce made CRM look less like a sales database and more like <span class="emph">a customer operating layer</span>. For manufacturers, that is useful only if the work starts with real operational pain, not product momentum.</p>
       <p>I would not ask &ldquo;what should we buy?&rdquo; first. I would ask &ldquo;<span class="emph">what problems are real enough to deserve change</span>?&rdquo;</p>
+
+      <figure class="article-figure">
+        <img src="../assets/crm-agentic-layer-decision.svg" alt="Comparison of clean core CRM and minimal CRM with an agentic layer, with decision criteria based on maturity and maintainability." />
+      </figure>
 
       <section class="takeaway">
         <h2>1. Start With The Use Cases That Actually Hurt</h2>

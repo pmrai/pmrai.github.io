@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1942 1508" role="img" aria-labelledby="title desc">
+  <title id="title">Clean core CRM compared with minimal CRM and agentic layer</title>
+  <desc id="desc">Two CRM architecture options are compared above a decision criteria chart using maturity and maintainability axes.</desc>
+  <style>
+    .card{fill:#fff;stroke:#dbe3ea;stroke-width:3}
+    .circle{fill:#f7f7f8;stroke:#6b7280;stroke-width:6}
+    .outer{fill:#f7f7f8;stroke:#9ca3af;stroke-width:6}
+    .axis{stroke:#4b5563;stroke-width:5}
+    .grid{stroke:#d5dee5;stroke-width:4}
+    .label{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#111827;font-weight:700}
+    .muted{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#6b7280;font-weight:500}
+    .small{font-size:24px}
+    .body{font-size:30px}
+    .heading{font-size:42px}
+    .chart-title{font-size:27px;letter-spacing:6px}
+  </style>
+
+  <rect x="22" y="22" width="918" height="670" rx="14" class="card"/>
+  <rect x="980" y="22" width="940" height="670" rx="14" class="card"/>
+
+  <text x="481" y="88" text-anchor="middle" class="label heading">Clean Core CRM</text>
+  <circle cx="481" cy="346" r="220" class="circle"/>
+  <text x="481" y="356" text-anchor="middle" class="label body">Core CRM</text>
+  <text x="481" y="618" text-anchor="middle" class="muted body">
+    <tspan x="481" dy="0">Sales function enabled by a cleaner, more complete CRM operating</tspan>
+    <tspan x="481" dy="38">model.</tspan>
+  </text>
+
+  <text x="1450" y="88" text-anchor="middle" class="label heading">Minimal CRM + Agentic Layer</text>
+  <circle cx="1450" cy="346" r="220" class="outer"/>
+  <circle cx="1450" cy="346" r="112" class="circle"/>
+  <text x="1450" y="208" text-anchor="middle" class="label body">Agentic Layer</text>
+  <text x="1450" y="356" text-anchor="middle" class="label body">Minimal CRM</text>
+  <text x="1450" y="618" text-anchor="middle" class="muted body">
+    <tspan x="1450" dy="0">Lightweight CRM foundation integrated with agents to enable business</tspan>
+    <tspan x="1450" dy="38">functions.</tspan>
+  </text>
+
+  <rect x="376" y="730" width="1190" height="742" rx="14" class="card"/>
+  <text x="407" y="790" class="label chart-title">DECISION CRITERIA</text>
+
+  <line x1="407" y1="1280" x2="1536" y2="1280" class="axis"/>
+  <line x1="407" y1="812" x2="407" y2="1280" class="axis"/>
+  <line x1="407" y1="1048" x2="1536" y2="1048" class="grid"/>
+  <line x1="972" y1="812" x2="972" y2="1280" class="grid"/>
+
+  <text x="438" y="858" class="muted small" font-weight="700">High</text>
+  <text x="438" y="1240" class="muted small" font-weight="700">Low</text>
+  <text x="407" y="1322" text-anchor="middle" class="muted small" font-weight="700">Low</text>
+  <text x="1512" y="1322" text-anchor="middle" class="muted small" font-weight="700">High</text>
+
+  <rect x="301" y="980" width="48" height="132" rx="8" class="card"/>
+  <text x="334" y="1046" text-anchor="middle" class="label body" transform="rotate(-90 334 1046)">Maturity</text>
+
+  <rect x="866" y="1286" width="210" height="48" rx="8" class="card"/>
+  <text x="971" y="1320" text-anchor="middle" class="label body">Maintainability</text>
+
+  <rect x="1308" y="846" width="168" height="48" rx="10" class="card"/>
+  <text x="1392" y="879" text-anchor="middle" class="label small">Ideal solution</text>
+  <circle cx="1355" cy="905" r="22" fill="#fff" stroke="#374151" stroke-width="6"/>
+  <circle cx="1355" cy="905" r="36" fill="none" stroke="#374151" stroke-width="6"/>
+
+  <text x="407" y="1375" class="muted body">
+    <tspan class="label">Maturity:</tspan><tspan> evidence of successful</tspan>
+    <tspan x="407" dy="40">implementation.</tspan>
+  </text>
+  <text x="980" y="1375" class="muted body">
+    <tspan class="label">Maintainability:</tspan><tspan> easier to operate, govern,</tspan>
+    <tspan x="980" dy="40">and evolve.</tspan>
+  </text>
+</svg>
